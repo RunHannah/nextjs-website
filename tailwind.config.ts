@@ -12,6 +12,11 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        sans: ['var(--font-rem)'],
+        mono: ['var(--font-zen-tokyo-zoo)'],
+        body: ['var(--font-roboto-flex)'],
+      },
     },
   },
   plugins: [],
