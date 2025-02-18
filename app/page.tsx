@@ -1,9 +1,9 @@
 "use client";
 
-import { useTheme, ThemeProvider } from "@/context/ThemeContext"
-import Navigation from "@/components/Navigation"
-import { Switch } from "@/components/ui/switch"
-import ThemeIcon from "@/components/ThemeIcon"
+import { useTheme, ThemeProvider } from "../context/themeContext"
+import Navigation from "../components/navigation"
+import { Switch } from "../components/ui/switch"
+import ThemeIcon from "../components/themeIcon"
 
 function HomeContent() {
   const { theme, setTheme } = useTheme();
