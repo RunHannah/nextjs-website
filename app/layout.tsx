@@ -33,7 +33,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${rem.variable} ${zen_tokyo_zoo.variable} ${roboto_flex.variable} max-w-[50rem] mx-auto p-5`}
+        className={`${rem.variable} ${zen_tokyo_zoo.variable} ${roboto_flex.variable} max-w-4xl mx-auto p-5`}
       >
         <ViewTransition>{children}</ViewTransition>
       </body>
