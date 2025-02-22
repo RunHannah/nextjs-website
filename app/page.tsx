@@ -29,9 +29,9 @@ function HomeContent() {
       </header>
       <Navigation />
       <main className={theme}>
-        <p className="font-body font-bold text-base pt-4 leading-[1.8] text-gray-800 dark:text-white">
+        <p className="font-body font-bold text-base pt-4 leading-[1.8] text-gray-800 dark:text-white text-center">
           * Due to company restructuring, I am exploring 👀
-          opportunities in Fullstack and Frontend roles. *
+          new opportunities in Fullstack and Frontend roles. *
         </p>
         <p className="font-body text-sm md:text-base pt-4 leading-[1.8] text-gray-800 dark:text-white">
           I&apos;m a software engineer based in Los Angeles ☀️ with expertise in
@@ -41,7 +41,7 @@ function HomeContent() {
           a unique, problem-solving mindset to tech!
         </p>
         <p className="font-body text-sm md:text-base pt-4 leading-[1.8] text-gray-800 dark:text-white">
-          This site is currently work in progress. I plan to update it with
+          This site is a work in progress. I plan to update it with
           projects, so stay tuned!
         </p>
         <div className="flex flex-row items-center align-middle mt-6">
