@@ -1,33 +1,38 @@
-import React, { ComponentPropsWithoutRef } from 'react';
-import Link from 'next/link';
-import { highlight } from 'sugar-high';
+import React, { ComponentPropsWithoutRef } from "react";
+import Link from "next/link";
+import { highlight } from "sugar-high";
 
-type HeadingProps = ComponentPropsWithoutRef<'h1'>;
-type ParagraphProps = ComponentPropsWithoutRef<'p'>;
-type ListProps = ComponentPropsWithoutRef<'ul'>;
-type ListItemProps = ComponentPropsWithoutRef<'li'>;
-type AnchorProps = ComponentPropsWithoutRef<'a'>;
-type BlockquoteProps = ComponentPropsWithoutRef<'blockquote'>;
+type HeadingProps = ComponentPropsWithoutRef<"h1">;
+type ParagraphProps = ComponentPropsWithoutRef<"p">;
+type ListProps = ComponentPropsWithoutRef<"ul">;
+type ListItemProps = ComponentPropsWithoutRef<"li">;
+type AnchorProps = ComponentPropsWithoutRef<"a">;
+type BlockquoteProps = ComponentPropsWithoutRef<"blockquote">;
 
 const components = {
   h1: (props: HeadingProps) => (
-    <h1 className="text-xl text-primary font-bold pt-12 mb-0" {...props} />
+    <h1
+      className="font-body text-xl text-primary font-bold pt-12 mb-2"
+      {...props}
+    />
   ),
   h2: (props: HeadingProps) => (
     <h2
-      className="text-gray-800 dark:text-zinc-200 font-medium mt-8 mb-3"
+      className="font-body text-gray-800 dark:text-zinc-200 font-medium mt-8 mb-3"
       {...props}
     />
   ),
   h3: (props: HeadingProps) => (
     <h3
-      className="text-gray-800 dark:text-zinc-200 font-medium mt-8 mb-3"
+      className="font-body text-gray-800 dark:text-zinc-200 font-medium mt-8 mb-3"
       {...props}
     />
   ),
-  h4: (props: HeadingProps) => <h4 className="font-medium" {...props} />,
+  h4: (props: HeadingProps) => (
+    <h4 className="font-body font-medium" {...props} />
+  ),
   p: (props: ParagraphProps) => (
-    <p className="text-gray-800 dark:text-zinc-300 mb-4" {...props} />
+    <p className="font-body text-gray-800 dark:text-zinc-300 mb-4" {...props} />
   ),
   ol: (props: ListProps) => (
     <ol
@@ -42,23 +47,23 @@ const components = {
     />
   ),
   li: (props: ListItemProps) => <li className="pl-1" {...props} />,
-  em: (props: ComponentPropsWithoutRef<'em'>) => (
+  em: (props: ComponentPropsWithoutRef<"em">) => (
     <em className="font-medium" {...props} />
   ),
-  strong: (props: ComponentPropsWithoutRef<'strong'>) => (
+  strong: (props: ComponentPropsWithoutRef<"strong">) => (
     <strong className="font-medium" {...props} />
   ),
   a: ({ href, children, ...props }: AnchorProps) => {
     const className =
-      'text-primary hover:text-red-700 dark:text-gray-400 hover:dark:text-gray-300 dark:underline dark:underline-offset-2 dark:decoration-gray-800';
-    if (href?.startsWith('/')) {
+      "font-body text-primary hover:text-red-700 dark:text-gray-400 hover:dark:text-gray-300 dark:underline dark:underline-offset-2 dark:decoration-gray-800";
+    if (href?.startsWith("/")) {
       return (
         <Link href={href} className={className} {...props}>
           {children}
         </Link>
       );
     }
-    if (href?.startsWith('#')) {
+    if (href?.startsWith("#")) {
       return (
         <a href={href} className={className} {...props}>
           {children}
@@ -77,7 +82,7 @@ const components = {
       </a>
     );
   },
-  code: ({ children, ...props }: ComponentPropsWithoutRef<'code'>) => {
+  code: ({ children, ...props }: ComponentPropsWithoutRef<"code">) => {
     const codeHTML = highlight(children as string);
     return <code dangerouslySetInnerHTML={{ __html: codeHTML }} {...props} />;
   },
