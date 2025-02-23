@@ -1,7 +1,7 @@
 import { promises as fs } from 'fs';
 import path from 'path';
 
-async function getPostSlugs(dir: string) {
+async function getBlogSlugs(dir: string) {
   const entries = await fs.readdir(dir, {
     recursive: true,
     withFileTypes: true,
@@ -19,11 +19,11 @@ async function getPostSlugs(dir: string) {
 }
 
 export default async function sitemap() {
-  const postDirectory = path.join(process.cwd(), 'app', 'posts');
-  const slugs = await getPostSlugs(postDirectory);
+  const blogDirectory = path.join(process.cwd(), 'app', 'blog');
+  const slugs = await getBlogSlugs(blogDirectory);
 
-  const posts = slugs.map((slug) => ({
-    url: `https://iamhannah.co/posts/${slug}`,
+  const blog = slugs.map((slug) => ({
+    url: `https://iamhannah.co/blog/${slug}`,
     lastModified: new Date().toISOString(),
   }));
 
@@ -32,5 +32,5 @@ export default async function sitemap() {
     lastModified: new Date().toISOString(),
   }));
 
-  return [...routes, ...posts];
+  return [...routes, ...blog];
 }

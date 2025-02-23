@@ -5,7 +5,7 @@ export default function Navigation() {
   const links = [
     { name: "home", url: "/"},
     { name: "work", url: "/work"},
-    { name: "posts", url: "/posts"},
+    { name: "blog", url: "/blog"},
     { name: "github", url: "https://github.com/RunHannah" },
     { name: "linkedin", url: "https://www.linkedin.com/in/hannahlee1" },
   ];
