@@ -1,11 +1,11 @@
 import React from "react";
-import Link from "next/link";
+import NavLink from "./navLink";
 
 export default function Navigation() {
   const links = [
-    { name: "home", url: "/"},
-    { name: "work", url: "/work"},
-    { name: "blog", url: "/blog"},
+    { name: "home", url: "/" },
+    { name: "work", url: "/work" },
+    { name: "blog", url: "/blog" },
     { name: "github", url: "https://github.com/RunHannah" },
     { name: "linkedin", url: "https://www.linkedin.com/in/hannahlee1" },
   ];
@@ -14,11 +14,7 @@ export default function Navigation() {
     <nav className="font-bold">
       <ul className="flex justify-between pt-4">
         {links.map((link) => (
-          <li key={link.name}>
-            <Link className="font-sans text-primary" href={link.url}>
-              {link.name}
-            </Link>
-          </li>
+          <NavLink key={link.name} name={link.name} url={link.url} />
         ))}
       </ul>
     </nav>
