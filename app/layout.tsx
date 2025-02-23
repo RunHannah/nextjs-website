@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { REM, Roboto_Flex, Zen_Tokyo_Zoo } from "next/font/google";
-import { unstable_ViewTransition as ViewTransition } from "react";
+import Main from "../components/main";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -35,7 +35,7 @@ export default function RootLayout({
       <body
         className={`${rem.variable} ${zen_tokyo_zoo.variable} ${roboto_flex.variable} max-w-4xl mx-auto p-5`}
       >
-        <ViewTransition>{children}</ViewTransition>
+        <Main>{children}</Main>
       </body>
     </html>
   );

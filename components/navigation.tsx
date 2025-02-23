@@ -3,6 +3,7 @@ import Link from "next/link";
 
 export default function Navigation() {
   const links = [
+    { name: "home", url: "/"},
     { name: "work", url: "/work"},
     { name: "posts", url: "/posts"},
     { name: "github", url: "https://github.com/RunHannah" },
