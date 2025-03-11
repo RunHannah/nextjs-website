@@ -62,7 +62,7 @@ export default function Project({ projects }: ProjectProps) {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                live
+                demo
               </a>
               <a
                 className="font-body font-bold text-primary hover:cursor-pointer"

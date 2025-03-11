@@ -14,14 +14,15 @@ function HomeContent() {
         </p>
         <p className="font-body text-sm md:text-base pt-4 leading-[1.8] text-gray-800 dark:text-white">
           I&apos;m a software engineer based in Los Angeles ☀️ with expertise in
-          Typescript, React, Next.js, Node, PostgreSQL, MongoDB, REST APIs, and
-          other fun stuff. Passionate about building robust web apps and always
-          learning new technologies. Former public sector professional bringing
-          a unique, problem-solving mindset to tech!
+          Typescript, React, Next.js, Node, PostgreSQL, MongoDB, REST APIs, some
+          Python, and other fun stuff. Passionate about building robust web apps
+          and always learning new technologies. Former public sector
+          professional bringing a unique, problem-solving mindset to tech!
         </p>
         <p className="font-body text-sm md:text-base pt-4 leading-[1.8] text-gray-800 dark:text-white flex flex-row">
-          <Construction className="pr-2" /> Activley building and updating this
-          site... <Construction className="pl-2" />
+          <Construction className="pr-2" />
+          Under construction – check back for updates!
+          <Construction className="pl-2" />
         </p>
       </div>
 

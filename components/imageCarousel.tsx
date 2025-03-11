@@ -47,7 +47,7 @@ export default function ImageCarousel({ images }: ImageCarouselProps) {
     <div className="w-full max-w-3xl mx-auto">
       {/* Carousel without the default navigation arrows */}
       <Carousel setApi={setApi} className="w-full">
-        <CarouselContent>
+        <CarouselContent className="transition-all duration-0">
           {images.map((image) => (
             <CarouselItem key={image.src}>
               <div className="p-1">
@@ -71,7 +71,7 @@ export default function ImageCarousel({ images }: ImageCarouselProps) {
         <Button
           variant="outline"
           size="icon"
-          className="rounded-full"
+          className="rounded-full hover:bg-primary"
           onClick={handlePrevious}
           aria-label="Previous slide"
         >
@@ -86,7 +86,7 @@ export default function ImageCarousel({ images }: ImageCarouselProps) {
               variant="ghost"
               size="sm"
               className={cn(
-                "h-2 w-2 p-0 rounded-full",
+                "h-2 w-2 p-0 rounded-full hover:bg-primary",
                 current === index ? "bg-primary" : "bg-muted"
               )}
               onClick={() => api?.scrollTo(index)}
@@ -98,7 +98,7 @@ export default function ImageCarousel({ images }: ImageCarouselProps) {
         <Button
           variant="outline"
           size="icon"
-          className="rounded-full"
+          className="rounded-full hover:bg-primary"
           onClick={handleNext}
           aria-label="Next slide"
         >

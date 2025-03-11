@@ -39,7 +39,7 @@ body {
     --primary-foreground: 0, 0%, 100%; /* White text on primary color */
     --secondary: 204, 15%, 87%; /* Muted blue-gray for secondary in dark mode */
     --secondary-foreground: 0, 0%, 93%; /* Light text on secondary in dark mode */
-    --muted: 220, 20%, 25%; /* Dark muted background in dark mode */
+    --muted: 0, 0%, 50%; /* Dark muted background in dark mode */
     --muted-foreground: 0, 0%, 60%; /* Muted gray text in dark mode */
     --destructive: 344, 100%, 60%; /* Bright pinkish-red (destructive color) */
     --destructive-foreground: 0, 0%, 100%; /* White text on destructive color */
