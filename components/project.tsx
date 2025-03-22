@@ -33,7 +33,7 @@ export default function Project({ projects }: ProjectProps) {
               <CardTitle className="font-body font-bold text-primary flex flex-row items-center">
                 {title}
 
-                <Icon className="text-gray-500 ml-2" />
+                <Icon className="text-secondary ml-2" />
               </CardTitle>
               <CardDescription className="font-body h-[70px] text-secondary">
                 {description}
